@@ -1,357 +1,1490 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Beckham - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobasshir Bhuiya Shagor | AI Innovation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="stylesheet" href="css/aos.css">
+        :root {
+            --tesla-black: #000000;
+            --tesla-dark: #171a20;
+            --tesla-gray: #393c41;
+            --tesla-light-gray: #5c5e62;
+            --tesla-white: #ffffff;
+            --tesla-red: #e31937;
+            --tesla-blue: #1a1d29;
+            --gradient-primary: linear-gradient(135deg, #e31937 0%, #ff4757 100%);
+            --font-primary: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+        }
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+        body {
+            font-family: var(--font-primary);
+            background: var(--tesla-black);
+            color: var(--tesla-white);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
 
-    <div class="KW_progressContainer">
-      <div class="KW_progressBar">
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+        }
 
-      </div>
-    </div>
-    <div class="page">
-    <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-      <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(images/author-2.jpg);"></div>
-        <div class="colorlib-table-cell js-fullheight">
-          <div class="row no-gutters">
-            <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Mobasshir Bhuiyan</a></h1>
-              <ul>
-                <li class="active"><a href="index.html"><span><small>01</small>Home</span></a></li>
-                <li><a href="about.html"><span><small>02</small>Resume</span></a></li>
-                <li><a href="services.html"><span><small>03</small>Services</span></a></li>
-                <li><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
-                <li><a href="blog.html"><span><small>05</small>Blog</span></a></li>
-                <li><a href="contact.html"><span><small>06</small>Contact</span></a></li>
-              </ul>
-            </div>
-          </div>
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--tesla-white);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--tesla-white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--tesla-red);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: var(--tesla-red);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(ellipse at center, var(--tesla-blue) 0%, var(--tesla-black) 70%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(227, 25, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(227, 25, 55, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(227, 25, 55, 0.1);
+            border: 1px solid var(--tesla-red);
+            border-radius: 50px;
+            color: var(--tesla-red);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, var(--tesla-white) 0%, var(--tesla-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin: 60px 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--tesla-red);
+            line-height: 1;
+            margin-bottom: 8px;
+            font-family: var(--font-mono);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            border: none;
+            border-radius: 0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--tesla-red);
+            color: var(--tesla-white);
+        }
+
+        .btn-primary:hover {
+            background: #c41230;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--tesla-white);
+            border: 2px solid var(--tesla-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--tesla-white);
+            color: var(--tesla-black);
+        }
+
+        /* Sections */
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: var(--tesla-dark);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(227, 25, 55, 0.1);
+            border: 1px solid var(--tesla-red);
+            border-radius: 20px;
+            color: var(--tesla-red);
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            color: var(--tesla-white);
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .profile-frame {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--tesla-red) 0%, #ff4757 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: var(--tesla-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-frame::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .about-content h3 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--tesla-white);
+        }
+
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 24px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            background: rgba(227, 25, 55, 0.1);
+            border-color: var(--tesla-red);
+            transform: translateY(-5px);
+        }
+
+        .skill-card h4 {
+            color: var(--tesla-white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--tesla-white);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            font-family: var(--font-mono);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--tesla-red);
+            transform: translateY(-10px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--tesla-white);
+            font-size: 24px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .project-link {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--tesla-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--tesla-red);
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--tesla-white);
+            margin-bottom: 16px;
+        }
+
+        .project-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--tesla-white);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 11px;
+            font-weight: 500;
+            font-family: var(--font-mono);
+        }
+
+        .project-award {
+            background: var(--gradient-primary);
+            color: var(--tesla-white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-top: 16px;
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .blog-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--tesla-red);
+            transform: translateY(-10px);
+        }
+
+        .blog-image {
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: var(--tesla-white);
+        }
+
+        .blog-content {
+            padding: 32px;
+        }
+
+        .blog-meta {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--tesla-red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .blog-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--tesla-white);
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .blog-excerpt {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: var(--tesla-red);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--tesla-white);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gradient-primary);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            background: rgba(227, 25, 55, 0.1);
+            border-color: var(--tesla-red);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 32px;
+            width: 0;
+            height: 0;
+            border: 12px solid transparent;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -24px;
+            border-left-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -24px;
+            border-right-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .timeline-date {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--tesla-red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--tesla-white);
+            margin-bottom: 8px;
+        }
+
+        .timeline-company {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .timeline-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--tesla-dark);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-top: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--tesla-white);
+        }
+
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+
+        .contact-item {
+            margin-bottom: 24px;
+        }
+
+        .contact-item h4 {
+            color: var(--tesla-red);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .contact-item a,
+        .contact-item span {
+            color: var(--tesla-white);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            color: var(--tesla-red);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--tesla-white);
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--tesla-red);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--tesla-black);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.5);
+            font-family: var(--font-mono);
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 60px !important;
+                padding-right: 0 !important;
+            }
+
+            .timeline-content::before {
+                left: -24px !important;
+                border-right-color: rgba(255, 255, 255, 0.05) !important;
+                border-left-color: transparent !important;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="logo">SHAGOR</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
     </nav>
-    
-    <div id="colorlib-page">
-      <header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="colorlib-navbar-brand">
-                <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/mobasshir.jpg);"></span>Mobasshir Bhuiyan</a>
-              </div>
-              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-            </div>
-          </div>
-        </div>
-      </header>
-    
-      <section class="home-slider owl-carousel js-fullheight">
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">Hello! I'm</a></p>
-                <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Mobasshir Bhuiyan</h1>
-              </div>
-            </div>
-          </div>
-        </div>
+            <div class="hero-content fade-in">
+                <div class="hero-badge">AI Researcher & Engineer</div>
+                <h1>The Future of Intelligence</h1>
+                <p class="subtitle">Pioneering next-generation AI systems through deep learning, computer vision, and
+                    intelligent automation</p>
 
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">I'm from Dhaka</a></p>
-                <h1 class="mb-3" data-scrollax="properties: {translateY: '30%', opacity: 1.6}">A Data Scientist</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END slider -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years Innovation</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">AI Solutions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Research Papers</div>
+                    </div>
+                </div>
 
-      <section class="ftco-section about-section">
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Explore Innovation
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i class="fas fa-user"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
         <div class="container">
-          <div class="row d-flex" data-scrollax-parent="true">
-            <div class="col-md-4 author-img" style="background-image: url(images/mobasshir-wide.jpg);" data-scrollax=" properties: { translateY: '-70%'}"></div>
-            <div class="col-md-2"></div>
-            <div class="col-md-6 wrap ftco-animate">
-              <div class="about-desc">
-                <h1 class="bold-text">About</h1>
-                <div class="p-5">
-                  <h2 class="mb-5">Hi! I'm Mobasshir Bhuiyan</h2>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>
-                  <p><a href="#">Checkout my resume</a></p>
-                  <ul class="ftco-footer-social list-unstyled mt-4">
-                    <li><a href="#"><span class="icon-twitter"></span></a></li>
-                    <li><a href="#"><span class="icon-facebook"></span></a></li>
-                    <li><a href="#"><span class="icon-instagram"></span></a></li>
-                  </ul>
-                  <h5>Contact me here!</h5>
-                  <p>Email: <a href="#">beckham@email</a></p>
-                  <p>Phone: <a href="#">(123)-456-789</a></p>
-                </div>
-              </div>
+            <div class="section-header fade-in">
+                <div class="section-badge">About</div>
+                <h2 class="section-title">Engineered for Excellence</h2>
+                <p class="section-subtitle">Advancing the boundaries of artificial intelligence through innovative
+                    research and cutting-edge engineering solutions</p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="ftco-section">
+            <div class="about-grid">
+                <div class="about-visual fade-in">
+                    <div class="profile-frame">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+
+                <div class="about-content fade-in">
+                    <h3>Mobasshir Bhuiya Shagor</h3>
+                    <p>Senior AI Engineer based in Dhaka, Bangladesh, with over 6 years of experience building
+                        intelligent systems that redefine what's possible. Specializing in deep learning architectures,
+                        computer vision applications, and scalable MLOps infrastructure.</p>
+
+                    <p>Currently leading AI innovation at Graaho Technologies, where I architect next-generation
+                        recommendation systems, facial recognition platforms, and real-time analytics solutions that
+                        have garnered national recognition and industry acclaim.</p>
+
+                    <p>My mission is to democratize AI technology by building robust, production-ready systems that
+                        solve real-world challenges across industries from agriculture to retail analytics.</p>
+
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <h4><i class="fas fa-brain"></i> Core AI Technologies</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Deep Learning</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">NLP</span>
+                                <span class="skill-tag">Generative AI</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4><i class="fas fa-cogs"></i> Engineering Stack</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">FastAPI</span>
+                                <span class="skill-tag">AWS</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4><i class="fas fa-database"></i> Data & MLOps</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MLflow</span>
+                                <span class="skill-tag">Apache Airflow</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Kafka</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4><i class="fas fa-code"></i> Programming</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
         <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>What i do</span>
-              <h2>My services</h2>
+            <div class="section-header fade-in">
+                <div class="section-badge">Research Blog</div>
+                <h2 class="section-title">Innovation Insights</h2>
+                <p class="section-subtitle">Exploring the frontiers of AI research and sharing breakthrough discoveries
+                </p>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-layers"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">UI/UX Design</h3>
-                  <h3 class="heading">Mobile App Design</h3>
-                  <h3 class="heading">Responsive Design</h3>
-                </div>
-              </div>      
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-gears"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">Product Strategy</h3>
-                  <h3 class="heading">Design Sprints</h3>
-                  <h3 class="heading">UX Strategy</h3>
-                </div>
-              </div>      
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-code"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">HTML/CSS</h3>
-                  <h3 class="heading">Prototyping</h3>
-                  <h3 class="heading">User Testing</h3>
-                </div>
-              </div>    
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="ftco-section">
+            <div class="blog-grid">
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">Dec 15, 2024 • Computer Vision</div>
+                        <h3 class="blog-title">Next-Gen Gaze Tracking for Retail Intelligence</h3>
+                        <p class="blog-excerpt">Revolutionary approach to customer behavior analysis using advanced
+                            computer vision and real-time processing for unprecedented retail insights...</p>
+                        <a href="#" class="read-more">Read Full Article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">Nov 28, 2024 • ML Systems</div>
+                        <h3 class="blog-title">Scalable AI with NVIDIA Merlin Framework</h3>
+                        <p class="blog-excerpt">Building production-grade recommendation engines that handle millions of
+                            users with sub-millisecond latency using cutting-edge MLOps practices...</p>
+                        <a href="#" class="read-more">Read Full Article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <i class="fas fa-traffic-light"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">Nov 10, 2024 • Computer Vision</div>
+                        <h3 class="blog-title">Real-Time Traffic Intelligence with YOLOv8</h3>
+                        <p class="blog-excerpt">Implementing state-of-the-art object detection for smart city
+                            infrastructure and automated traffic management systems...</p>
+                        <a href="#" class="read-more">Read Full Article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">Oct 22, 2024 • Security AI</div>
+                        <h3 class="blog-title">Zero-Trust Facial Authentication Systems</h3>
+                        <p class="blog-excerpt">Building privacy-first facial recognition infrastructure with advanced
+                            anti-spoofing and enterprise-grade security protocols...</p>
+                        <a href="#" class="read-more">Read Full Article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <i class="fas fa-cow"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">Oct 5, 2024 • AgTech AI</div>
+                        <h3 class="blog-title">AI Revolution in Agricultural Technology</h3>
+                        <p class="blog-excerpt">Transforming livestock management through computer vision and predictive
+                            analytics for sustainable farming practices...</p>
+                        <a href="#" class="read-more">Read Full Article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">Sep 18, 2024 • MLOps</div>
+                        <h3 class="blog-title">Production AI at Scale</h3>
+                        <p class="blog-excerpt">Best practices for deploying machine learning models in enterprise
+                            environments with robust monitoring and automated workflows...</p>
+                        <a href="#" class="read-more">Read Full Article</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
         <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>Checkout a few of my works</h2>
+            <div class="section-header fade-in">
+                <div class="section-badge">Portfolio</div>
+                <h2 class="section-title">Breakthrough Projects</h2>
+                <p class="section-subtitle">Award-winning AI solutions that push the boundaries of what's possible</p>
             </div>
-          </div>
-          <div class="row no-gutters">
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center" style="background-image: url('images/work-1.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text">
-              <h4 class="subheading">Illustration</h4>
-              <h2 class="heading"><a href="portfolio-single.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('images/work-2.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">Application</h4>
-              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center" style="background-image: url('images/work-3.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text">
-              <h4 class="subheading">Web Design</h4>
-              <h2 class="heading"><a href="portfolio-single.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('images/work-4.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">Application</h4>
-              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center" style="background-image: url('images/work-5.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text">
-              <h4 class="subheading">Animation</h4>
-              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('images/work-6.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">Branding</h4>
-              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
 
-      <section class="ftco-section ftco-counter" id="section-counter">
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-cow"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Smart Guess - AgTech AI</h3>
+                    <p class="project-description">Revolutionary computer vision system using advanced Mask R-CNN
+                        architecture for automated livestock assessment and breed prediction with 97% accuracy.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Mask R-CNN</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Deep Learning</span>
+                    </div>
+                    <div class="project-award">🏆 National ICT Award 2019</div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">AlgoRec - AI Recommendation Engine</h3>
+                    <p class="project-description">Enterprise-grade recommendation system powered by NVIDIA Merlin
+                        framework, serving millions of users with sub-10ms latency and advanced MLOps pipeline.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">NVIDIA Merlin</span>
+                        <span class="tech-tag">MLflow</span>
+                        <span class="tech-tag">Apache Airflow</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">FaceID - Zero-Trust Authentication</h3>
+                    <p class="project-description">Next-generation facial recognition microservice with advanced
+                        anti-spoofing, privacy protection, and enterprise-grade security protocols.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Security</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-traffic-light"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Traffic AI - Smart City Intelligence</h3>
+                    <p class="project-description">Real-time traffic analysis platform using YOLOv8 and Apache Kafka for
+                        intelligent transportation systems and automated toll collection.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">YOLOv8</span>
+                        <span class="tech-tag">Apache Kafka</span>
+                        <span class="tech-tag">Real-time Processing</span>
+                        <span class="tech-tag">IoT</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Gaze AI - Retail Intelligence</h3>
+                    <p class="project-description">Advanced eye tracking system for retail analytics, measuring customer
+                        engagement and attention patterns with precision gaze estimation technology.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">MediaPipe</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Real-time Analytics</span>
+                        <span class="tech-tag">Behavioral AI</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Categorized Affect Map</h3>
+                    <p class="project-description">Smart GIS platform integrating spatial data with emotion analysis to
+                        categorize locations based on collective human affective responses.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">GIS</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                        <span class="tech-tag">Spatial Analytics</span>
+                        <span class="tech-tag">Data Science</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
         <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>I love to share my achievements</h2>
+            <div class="section-header fade-in">
+                <div class="section-badge">Experience</div>
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">Leading AI innovation across multiple organizations and breakthrough
+                    projects</p>
             </div>
-          </div>
-          <div class="row d-flex justify-content-start">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Clients</span>
-                  <strong class="number" data-number="420">0</strong>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">October 2021 - Present</div>
+                        <h3 class="timeline-title">Senior Software Engineer (AI/ML)</h3>
+                        <div class="timeline-company">Graaho Technologies • Reston, VA</div>
+                        <p class="timeline-description">Leading AI innovation initiatives, architecting next-generation
+                            ML systems, and driving breakthrough solutions in computer vision, recommendation engines,
+                            and real-time analytics platforms.</p>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Project done</span>
-                  <strong class="number" data-number="890">0</strong>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">October 2021 - January 2023</div>
+                        <h3 class="timeline-title">Senior AI Engineer</h3>
+                        <div class="timeline-company">Renforce • Sydney, Australia</div>
+                        <p class="timeline-description">Built cutting-edge regulatory AI solutions during Alpha Phase.
+                            Designed distributed ML systems, workflow orchestration, and advanced MLOps infrastructure
+                            for enterprise deployment.</p>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <div class="col-md-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Cups of coffee</span>
-                  <strong class="number" data-number="1000">0</strong>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 2020 - September 2021</div>
+                        <h3 class="timeline-title">Machine Learning Engineer</h3>
+                        <div class="timeline-company">Graaho Technologies • Reston, VA</div>
+                        <p class="timeline-description">Led cross-functional AI teams, developed data-driven solutions,
+                            and delivered production-ready ML systems for enterprise clients across multiple industries.
+                        </p>
+                    </div>
                 </div>
-              </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">September 2017 - December 2018</div>
+                        <h3 class="timeline-title">AI Research Assistant</h3>
+                        <div class="timeline-company">American International University-Bangladesh</div>
+                        <p class="timeline-description">Pioneered research in spatial AI and emotion analysis, resulting
+                            in breakthrough GIS applications and award-winning publications in the Data Science Lab.</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
-      
-      <footer class="ftco-footer ftco-bg-dark ftco-section">
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
         <div class="container">
-          <div class="row mb-5 justify-content-center">
-            <div class="col-md-5 text-center">
-              <div class="ftco-footer-widget mb-5">
-                <ul class="ftco-footer-social list-unstyled">
-                  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-              </div>
-              <div class="ftco-footer-widget">
-                <h2 class="mb-3">Contact Us</h2>
-                <p class="h3 email"><a href="#">info@email.com</a></p>
-              </div>
+            <div class="section-header fade-in">
+                <div class="section-badge">Contact</div>
+                <h2 class="section-title">Let's Build the Future</h2>
+                <p class="section-subtitle">Ready to collaborate on revolutionary AI solutions that change the world</p>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
 
-              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true" style="color: red;"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Connect with Innovation</h3>
+                    <p>Interested in AI research collaboration, cutting-edge consulting projects, or discussing
+                        breakthrough machine learning solutions? Let's create something extraordinary together.</p>
+
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <a href="mailto:mobasshirbhuiyan.shagor@gmail.com">mobasshirbhuiyan.shagor@gmail.com</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <span>+880-1682834837</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>Location</h4>
+                        <span>Dhaka, Bangladesh</span>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mobasshirbhuiya-shagor" class="social-link"
+                            target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://medium.com/@mobasshirbhuiya" class="social-link" target="_blank">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                        <a href="https://www.mobasshirbhuiya.com" class="social-link" target="_blank">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-details fade-in">
+                    <h3>Research Focus Areas</h3>
+                    <div style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; font-size: 16px;">
+                        <p style="margin-bottom: 24px;"><strong style="color: var(--tesla-red);">Current Innovation
+                                Areas:</strong></p>
+                        <ul style="margin-bottom: 32px; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--tesla-red);">▶</span>
+                                Computer Vision for Smart Agriculture
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--tesla-red);">▶</span>
+                                Real-time AI Recommendation Systems
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--tesla-red);">▶</span>
+                                Advanced Eye Tracking & Gaze Estimation
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--tesla-red);">▶</span>
+                                Enterprise MLOps & Production AI
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--tesla-red);">▶</span>
+                                Facial Recognition & Security AI
+                            </li>
+                        </ul>
+
+                        <p style="margin-bottom: 16px;"><strong style="color: var(--tesla-red);">Collaboration
+                                Opportunities:</strong></p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--tesla-red);">▶</span>
+                                AI Research Publications & Papers
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--tesla-red);">▶</span>
+                                Open Source ML Framework Development
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--tesla-red);">▶</span>
+                                Enterprise AI Consulting Projects
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--tesla-red);">▶</span>
+                                Conference Speaking & Tech Talks
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
+    </section>
 
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mobasshir Bhuiya Shagor. Engineered for Innovation. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-      </div>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-    </div>
+        // Enhanced navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(0, 0, 0, 0.95)';
+                nav.style.borderBottom = '1px solid rgba(227, 25, 55, 0.3)';
+            } else {
+                nav.style.background = 'rgba(0, 0, 0, 0.8)';
+                nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            }
+        });
 
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Enhanced stats counter animation
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const target = parseInt(stat.textContent.replace('+', ''));
+                let current = 0;
+                const increment = target / 60;
+
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        stat.textContent = Math.ceil(current) + (stat.textContent.includes('+') ? '+' : '');
+                        setTimeout(updateCounter, 40);
+                    } else {
+                        stat.textContent = target + (stat.textContent.includes('+') ? '+' : '');
+                    }
+                };
+
+                updateCounter();
+            });
+        }
+
+        // Trigger stats animation when hero section is visible
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(animateStats, 1200);
+                    heroObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        heroObserver.observe(document.querySelector('.hero'));
+
+        // Enhanced card hover effects
+        document.querySelectorAll('.project-card, .blog-card, .skill-card').forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+                this.style.boxShadow = '0 20px 40px rgba(227, 25, 55, 0.2)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+
+        // Initialize
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease';
+    </script>
+</body>
+
 </html>
