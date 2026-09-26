@@ -3,14 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mobasshir Bhuiya Shagor — Applied ML Research</title>
-<meta name="description" content="Mobasshir Bhuiya Shagor builds benchmarks, evaluation protocols and audits for personalization systems under distribution shift. Staff ML Engineer at Graaho Technologies, Dhaka. Applying for a US CS PhD, Fall 2027.">
+<title>Mobasshir Bhuiya Shagor · Evaluation for personalization systems</title>
+<meta name="description" content="Mobasshir Bhuiya Shagor builds benchmarks, evaluation protocols and audits for personalization systems. First author of BoviShift, a six-year longitudinal benchmark. Staff ML Engineer at Graaho Technologies, Dhaka. Applying for a US CS PhD, Fall 2027.">
 <meta name="author" content="Mobasshir Bhuiya Shagor">
 <link rel="canonical" href="https://www.mobasshirbhuiya.com/">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://www.mobasshirbhuiya.com/">
 <meta property="og:title" content="Mobasshir Bhuiya Shagor: evaluation instruments for personalization systems">
-<meta property="og:description" content="Benchmarks, evaluation protocols and audits for learned systems under distribution shift, grounded in nearly eight years of production ML.">
+<meta property="og:description" content="Six years of data, one question: does a learned system still deserve trust once it meets real people? Benchmarks, protocols and audits, grounded in nearly eight years of production ML.">
+<meta property="og:image" content="https://www.mobasshirbhuiya.com/media/portrait.webp">
 <meta name="theme-color" content="#E9EBE5">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2317242B'/%3E%3Ctext x='16' y='22.5' font-family='Georgia,serif' font-size='19' fill='%23E9EBE5' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -354,6 +355,40 @@
       padding-right:1.5rem;
     }
   }
+
+  /* ---------- hero with portrait ---------- */
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) clamp(150px,19vw,220px);gap:clamp(2rem,5vw,4rem);align-items:start;}
+  .hero-portrait{margin:0;padding-top:.3rem;}
+  .hero-portrait img{display:block;width:100%;height:auto;aspect-ratio:720/749;object-fit:cover;border:1px solid var(--rule-strong);}
+  .hero-portrait figcaption{font-size:.78rem;color:var(--faint);margin-top:.45rem;}
+
+  /* ---------- production grid ---------- */
+  .also{margin-top:clamp(2.6rem,6vw,3.6rem);padding-top:clamp(2rem,5vw,2.8rem);border-top:1px solid var(--rule-strong);}
+  .also h3{font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:clamp(1.2rem,2.5vw,1.45rem);margin:0 0 .35rem;}
+  .also > p{margin:0 0 1.6rem;color:var(--muted);max-width:var(--measure);}
+  .also-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem 2rem;}
+  .also-card{border-top:1px solid var(--rule);padding-top:.8rem;}
+  .also-card h4{margin:0 0 .25rem;font-size:.98rem;font-weight:500;}
+  .also-card p{margin:0;font-size:.9rem;color:var(--muted);}
+  .also-card img{display:block;width:100%;height:auto;margin:.2rem 0 .7rem;border:1px solid var(--rule-strong);}
+  .also-card .links{margin-top:.45rem;font-size:.86rem;}
+
+  .talk-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.2rem,3vw,2.2rem);align-items:center;margin-bottom:clamp(1.6rem,4vw,2.4rem);}
+  .talk-feature img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);}
+  .talk-feature p{margin:0 0 .5rem;color:var(--muted);max-width:52ch;}
+  .talk-feature h3{font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:1.25rem;margin:0 0 .4rem;}
+
+  .entry-body .figure{margin-top:1rem;}
+  .figure-svg img{background:var(--raised);}
+
+  @media (max-width:720px){
+    .hero-grid{grid-template-columns:minmax(0,1fr);}
+    .hero-portrait{order:-1;width:118px;padding-top:0;}
+    .hero-portrait figcaption{display:none;}
+    .talk-feature{grid-template-columns:minmax(0,1fr);}
+    .band-head{flex-wrap:wrap;gap:.3rem 1rem;}
+    .band-count{white-space:normal;}
+  }
 </style>
 </head>
 <body>
@@ -368,7 +403,7 @@
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#systems">Systems</a>
-      <a href="#writing">Writing</a>
+      <a href="#writing">Writing &amp; talks</a>
       <a href="#background">Background</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -378,31 +413,44 @@
 <main id="main">
 
   <section class="wrap hero" id="top">
-    <p class="hero-name stage stage-1">Applied machine learning research &middot; Dhaka, Bangladesh</p>
-    <h1 class="hero-claim stage stage-2">
-      A system that acts on someone's behalf needs an instrument that checks it.
-      <span class="second">I build the instruments.</span>
-    </h1>
-    <div class="hero-body stage stage-3">
-      <p>
-        Datasets, benchmarks and audits for personalization systems: the measurement side of trustworthy
-        AI, rather than the model side. My work asks whether a reported number survives contact with
-        the conditions it will actually meet: a different year, a different population, a user who cannot
-        see what the system withheld.
-      </p>
-      <p>
-        <strong>Staff Machine Learning Engineer at <a href="https://www.graaho.com/">Graaho Technologies</a></strong>,
-        with nearly eight years of production machine learning across recommender systems, computer
-        vision, NLP and MLOps. Currently applying to US CS PhD programs for Fall 2027, and open to applied scientist
-        roles.
-      </p>
-    </div>
-    <div class="contact-rail stage stage-4">
-      <a href="mailto:mobasshir.bhuiya@gmail.com">mobasshir.bhuiya@gmail.com</a>
-      <a href="https://scholar.google.com/citations?user=QS61JrYAAAAJ&amp;hl=en">Google Scholar</a>
-      <a href="https://github.com/bhuiyanmobasshir94">GitHub</a>
-      <a href="https://www.linkedin.com/in/mobasshir-bhuiya-shagor/">LinkedIn</a>
-      <a href="Shagor_Mobasshir_CV.pdf">CV</a>
+    <div class="hero-grid">
+      <div>
+        <p class="hero-name stage stage-1">Applied machine learning research &middot; Dhaka, Bangladesh</p>
+        <h1 class="hero-claim stage stage-2">
+          A system that acts on someone's behalf needs an instrument that checks it.
+          <span class="second">I build the instruments.</span>
+        </h1>
+        <div class="hero-body stage stage-3">
+          <p>
+            Datasets, benchmarks and audits for personalization systems: the measurement side of trustworthy AI,
+            rather than the model side. My work asks whether a reported number survives contact with the conditions
+            it will actually meet: a different year, a different population, a user who cannot see what the system
+            withheld.
+          </p>
+          <p>
+            The clearest example is BoviShift, a longitudinal benchmark I lead as first author. I collected its data
+            myself over six years, from 2021 to 2026, and built it to separate what a model has genuinely learned
+            from what it merely remembers.
+          </p>
+          <p>
+            As a <strong>Staff Machine Learning Engineer at <a href="https://www.graaho.com/">Graaho Technologies</a></strong>,
+            I have spent nearly eight years shipping recommendation, vision and LLM systems in production. I am
+            applying to US PhD programmes in computer science for Fall 2027, and I am open to applied scientist roles.
+          </p>
+        </div>
+        <div class="contact-rail stage stage-4">
+          <a href="mailto:mobasshir.bhuiya@gmail.com">mobasshir.bhuiya@gmail.com</a>
+          <a href="Shagor_Mobasshir_CV.pdf">CV</a>
+          <a href="Shagor_Mobasshir_Research_Summary.pdf">One-page research summary</a>
+          <a href="https://scholar.google.com/citations?user=QS61JrYAAAAJ&amp;hl=en">Google Scholar</a>
+          <a href="https://github.com/bhuiyanmobasshir94">GitHub</a>
+          <a href="https://www.linkedin.com/in/mobasshir-bhuiya-shagor/">LinkedIn</a>
+        </div>
+      </div>
+      <figure class="hero-portrait stage stage-2">
+        <img src="media/portrait.webp" width="720" height="749" alt="Portrait of Mobasshir Bhuiya Shagor">
+        <figcaption>Mobasshir Bhuiya Shagor</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -414,35 +462,33 @@
     </div>
 
     <p class="focus-lead">
-      Personalization is where AI most often acts <em>for</em> someone rather than answering them. That makes
-      it the right venue for a measurement problem: how do you verify a system deserves the trust already
-      placed in it?
+      Personalization is where AI most often acts <em>for</em> someone instead of answering them. That makes it
+      the right place to ask a measurement question: how would we know when a system has stopped deserving the
+      trust it already has?
     </p>
 
     <div class="focus-body">
       <p>
-        Most evaluation in this space measures a model against a held-out slice of the same distribution
-        that trained it. That answers a narrow question well and a useful one badly. The failures that
-        matter in deployment are the ones a clean test split cannot see: an identity that leaks between
-        splits and inflates accuracy, a population that drifts over years while the benchmark stays fixed,
-        an explanation that reads fluently and does not describe what the model actually did.
+        Most evaluation in this area scores a model on a held-out slice of the data that trained it. That answers
+        a narrow question very reliably. The failures that hurt in deployment sit outside it: an animal, or a user,
+        who appears on both sides of a split and quietly inflates the score; a population that drifts for years
+        while the benchmark stands still; an explanation that reads well and has nothing to do with how the model
+        actually ranked.
       </p>
       <p>
-        So my work builds <strong>instruments rather than models</strong>: longitudinal datasets that make drift
-        measurable, evaluation protocols that separate leakage from genuine generalisation, and audits that
-        test whether a system's account of itself is faithful.
+        So I build <strong>instruments rather than models</strong>: longitudinal datasets that make drift
+        measurable, protocols that separate leakage from real generalisation, and audits that check whether a
+        system's account of itself is true.
       </p>
       <p>
-        Longer term I am working toward the same measurement problem for <strong>agentic</strong> systems,
-        where a model acts on someone's behalf rather than only advising them, and the cost of an unverified
-        decision stops being a bad suggestion. The work below does not include agents yet. It builds the
-        benchmarks and audits that evaluating an agent would need first.
+        Longer term I want to take the same problem to <strong>agentic</strong> systems, which make decisions on
+        a person's behalf, where an unverified decision costs more than a bad suggestion. I have not published on
+        agents yet. The benchmarks and audits below are the groundwork an honest agent evaluation will need.
       </p>
       <p>
-        All of it sits on the production work further down. Nearly eight years of shipping recommenders, vision
-        pipelines and multi-tenant inference is where the failure modes came from: silent degradation,
-        confident wrong output, metrics that looked fine until a real population met them. The research
-        is an attempt to measure what I kept having to patch.
+        All of it comes out of production. Nearly eight years of shipping recommenders, vision pipelines and
+        multi-tenant inference taught me which failures stay silent. The research is how I measure the things I
+        used to patch.
       </p>
     </div>
   </section>
@@ -461,14 +507,12 @@
           <dd>BoviShift</dd>
           <dt>Status</dt>
           <dd class="pending">Under review</dd>
-          <dt>Data</dt>
-          <dd>2,657 unique bulls, 2021&ndash;2026, single marketplace</dd>
-          <dt>Contribution</dt>
-          <dd class="stack">Three-way evaluation protocol decomposition</dd>
           <dt>Role</dt>
-          <dd>Co-developer</dd>
+          <dd>First author, project lead</dd>
+          <dt>Data</dt>
+          <dd>2,657 unique bulls, collected 2021&ndash;2026</dd>
           <dt>Collaborators</dt>
-          <dd class="stack">Nilambar Halder Tonmoy, Indiana University; supervised by Prof. Dr. Saef Ullah Miah, AIUB</dd>
+          <dd class="stack">Nilambar Halder Tonmoy, Indiana University; Prof. Dr. Saef Ullah Miah, AIUB</dd>
           <dt>Materials</dt>
           <dd class="materials">
             <!-- When the arXiv preprint is live, replace this link with it. -->
@@ -479,58 +523,35 @@
       <div class="record-body">
         <h3 class="record-title">Separating what a benchmark measures from what it merely remembers</h3>
         <p>
-          Visual phenotyping models for livestock report strong numbers. Six years of the same marketplace
-          gave us a way to ask what those numbers are made of. BoviShift is a multi-attribute audit built on
-          2,657 unique bulls photographed between 2021 and 2026, long enough that the population itself
-          moves underneath the task.
+          From 2021 to 2026 I collected images of the bulls sold through one livestock marketplace in Bangladesh:
+          2,657 animals, with every photograph tied to the animal it shows. Six years is long enough for the
+          population to change under the task. The identity link is what lets you ask the uncomfortable question
+          of any vision benchmark: is the model generalising, or does it remember the cow?
         </p>
         <p>
-          The core contribution is a three-way protocol decomposition. A conventional random split conflates
-          two very different things: a model recognising an animal it has already seen under a new photograph,
-          and a model generalising to animals it has not. Splitting the evaluation into successive protocols
-          isolates identity leakage from temporal distribution shift, so the accuracy drop can be attributed
-          rather than reported as a single degraded figure. The same decomposition applies anywhere a
-          benchmark is assembled from repeat observations of the same entities, which describes most personalization data.
+          The contribution is a three-way protocol decomposition. A random split lets the same animal sit on both
+          sides of the boundary. Holding identities apart shows what the model really generalises, and testing
+          forward in time shows what the population did. The drop between the first two protocols is identity
+          leakage; the drop between the second and third is temporal shift. Most personalization data is repeated
+          observation of the same people, so the decomposition carries straight over to recommender benchmarks.
         </p>
-
-        <figure hidden data-todo="add asset, then remove hidden" class="figure">
-          <!-- Replace this whole <div class="slot"> with:
-               <img src="media/bovishift-protocols.svg" alt="Diagram of the three evaluation protocols: P1 random split, P2 identity-disjoint split, P3 temporally forward split."> -->
-          <div class="slot">
-            <p class="slot-what">Protocol decomposition diagram — P1, P2, P3</p>
-            <p class="slot-spec">
-              The highest-value asset on this site. Three panels showing the same bull population split three
-              ways, with the accuracy delta annotated between panels so a reader sees leakage and shift as
-              separate quantities. Vector (SVG) so it stays sharp; roughly 3:2.
-            </p>
-          </div>
+        <figure class="figure figure-svg">
+          <img src="media/bovishift-protocols.svg" width="960" height="380" alt="Diagram of the three BoviShift protocols. P1, a random split, lets animals A and C appear in both training and test. P2 keeps every test animal out of training. P3 also uses new animals, drawn from later years. The P1 to P2 gap measures identity leakage and the P2 to P3 gap measures temporal shift.">
           <figcaption>
-            <b>Identity leakage and temporal shift, separated.</b> A random split lets the same animal appear
-            on both sides of the boundary. Holding identity disjoint isolates what the model actually
-            generalises; evaluating forward in time isolates what the population did.
+            <b>The evaluation design.</b> This shows only which animals each protocol allows on each side of the
+            split. The measured gaps are in the paper.
           </figcaption>
         </figure>
-
-        <figure hidden data-todo="add asset, then remove hidden" class="figure">
-          <div class="plate">
-            <div class="cell">2021</div>
-            <div class="cell">2022</div>
-            <div class="cell">2023</div>
-            <div class="cell">2025</div>
-            <div class="cell">2026</div>
-          </div>
-          <figcaption>
-            <b>The same marketplace, five years apart.</b> Replace each cell with a representative frame from
-            that year — camera, framing and lighting conventions all drift, which is the point. Square crops,
-            about 600&nbsp;px, consistent subject distance.
-          </figcaption>
-        </figure>
-
+        <p style="margin-top:1.2rem;">
+          Nilambar Halder Tonmoy and Prof. Dr. Saef Ullah Miah joined me for the experiments and the submission,
+          and the three of us are extending the benchmark together.
+        </p>
         <div class="limitation">
           <span class="limitation-label">Excluded by design</span>
           <p>
-            The 2024 cohort is held out of the primary temporal arm. Its missingness is non-random, and
-            including it would have let a collection artifact masquerade as distribution shift. That is the error the protocol exists to prevent.
+            The 2024 cohort is held out of the primary temporal arm. Its missingness is non-random, and including
+            it would let a collection artifact pass as distribution shift. That is the error the protocol exists
+            to prevent.
           </p>
         </div>
       </div>
@@ -543,24 +564,27 @@
           <dd>Audit of LLM-based recommenders</dd>
           <dt>Status</dt>
           <dd class="pending">In preparation</dd>
+          <dt>Role</dt>
+          <dd>Sole author</dd>
           <dt>Examines</dt>
           <dd class="stack">Explanation faithfulness, hallucination, fairness</dd>
           <dt>Constraint</dt>
-          <dd>Zero-GPU by design</dd>
+          <dd>Runs without GPU compute</dd>
         </dl>
       </div>
       <div class="record-body">
         <h3 class="record-title">When a recommender explains itself, is the explanation true?</h3>
         <p>
-          Language models have made recommendation explanations fluent. Fluency is not faithfulness. An LLM
-          asked why it surfaced an item will produce a reason whether or not that reason had anything to do with the ranking, and users reasonably treat a stated reason as a real one. That gap is
-          measurable, and largely unmeasured.
+          Language models have made recommendation explanations fluent, and fluency is easy to mistake for honesty.
+          Ask an LLM why it surfaced an item and it will give you a reason whether or not that reason had anything
+          to do with the ranking. Users reasonably treat a stated reason as a real one. The gap between the two is
+          measurable, and mostly unmeasured.
         </p>
         <p>
-          This audit tests three properties together: whether explanations describe the actual basis of a
-          recommendation, whether the system fabricates attributes of items it recommends, and whether either
-          failure lands unevenly across groups. Running the whole audit without GPU compute is a deliberate constraint: an evaluation instrument that requires a cluster is one most teams will never run
-          against their own system.
+          The audit tests three things together: whether an explanation describes the actual basis of a
+          recommendation, whether the system invents attributes of the items it recommends, and whether either
+          failure falls unevenly across groups of users. I built it to run without GPU compute on purpose. An
+          audit that needs a cluster is one most teams will never run against their own system.
         </p>
       </div>
     </article>
@@ -569,30 +593,16 @@
 
       <article class="entry">
         <div>
-          <h3 class="entry-key">CID</h3>
+          <h3 class="entry-key">CID: Cow Images Dataset</h3>
           <p class="entry-meta">Published, ICCA 2022</p>
         </div>
         <div class="entry-body">
           <p>
-            A cow image dataset of 17,899 images annotated with sex, colour, breed, feed, age, teeth, height,
-            weight, price and size, released with baseline regression and classification models so the dataset
-            arrived with evidence of what it supports rather than a claim. The direct predecessor to
-            BoviShift, and the reason the six-year longitudinal record exists at all.
+            The first public release from this line of work: 513 cattle across 8 breeds, with 2,052 photographs and
+            15,812 video frames, each animal annotated for ten attributes including weight, height, age and breed.
+            I released it with regression and classification baselines, so the data arrived with evidence of what
+            it supports. It is the most-starred and most-forked repository on my GitHub.
           </p>
-          <figure hidden data-todo="add asset, then remove hidden" class="figure figure-narrow">
-            <div class="plate">
-              <div class="cell">sample</div>
-              <div class="cell">sample</div>
-              <div class="cell">sample</div>
-              <div class="cell">sample</div>
-              <div class="cell">sample</div>
-              <div class="cell">sample</div>
-            </div>
-            <figcaption>
-              Six frames spanning the annotated range — breed, colour and body condition — so a reader can
-              judge the dataset's variation without downloading it.
-            </figcaption>
-          </figure>
           <p class="links">
             <a href="https://doi.org/10.1145/3542954.3543018">Paper</a>
             <a href="https://github.com/bhuiyanmobasshir94/CID">Dataset</a>
@@ -603,14 +613,35 @@
 
       <article class="entry">
         <div>
-          <h3 class="entry-key">Categorized Affect Map</h3>
-          <p class="entry-meta">Published, ICCA 2020</p>
+          <h3 class="entry-key">Smart Guess</h3>
+          <p class="entry-meta">2019, where it started</p>
         </div>
         <div class="entry-body">
           <p>
-            A category-affect-space model for classifying places by problem category from human affective
-            response, using multi-label classification over crowdsourced data. An early instance of the same
-            instinct: the contribution was a collection method and a representation, not a model.
+            Mask R-CNN finds the girth, front and back of the animal; a multi-input-output network predicts height,
+            length, weight and breed. Length and weight were badly imbalanced, so I treated them as regression rather
+            than forcing them into classes. It was second runner-up for AI in Agriculture at the BASIS National ICT
+            Awards 2019. A later PyTorch version, trained on 13,964 images, is still used for procurement screening
+            at Bengal Meat.
+          </p>
+          <figure class="figure figure-narrow">
+            <img src="media/smart-guess.webp" width="1100" height="619" loading="lazy" alt="Smart Guess launch graphic showing the mobile app: take a picture, upload it, get the estimate.">
+            <figcaption>The Smart Guess app as it launched.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div>
+          <h3 class="entry-key">Categorized Affect Map</h3>
+          <p class="entry-meta">Published, ICCA 2020 &middot; undergraduate thesis</p>
+        </div>
+        <div class="entry-body">
+          <p>
+            A crowdsourced GIS that classifies places by problem category from how people feel about them, using a
+            category-affect-space model and multi-label classification. I led the thesis group from a Top 10 finish
+            at the SDG Hackathon 2018 to publication. Looking back, it was the same instinct in an earlier form: the
+            contribution was a way of collecting and representing data, not a model.
           </p>
           <p class="links">
             <a href="https://dl.acm.org/doi/10.1145/3377049.3377074">Paper</a>
@@ -622,39 +653,15 @@
       <article class="entry">
         <div>
           <h3 class="entry-key">KhaoDao Recommendation Engine</h3>
-          <p class="entry-meta">Prototype research with NUS</p>
+          <p class="entry-meta">Prototype research with NUS, 2020</p>
         </div>
         <div class="entry-body">
           <p>
-            Context-aware recommendation using weather, day of week and time of day. Moved from classical
-            methods on Surprise and Implicit to DLRM for better cold-start and sparsity behaviour, then
-            optimised for low-latency online prediction. Conducted under NUS supervision as part of their
-            prototype development programme.
+            A context-aware food recommender that conditions on weather, day of week and time of day. I started with
+            classical collaborative filtering on Surprise and Implicit, moved to DLRM once cold start and sparsity
+            became the real problems, and then spent most of the effort on low-latency online prediction. Built under
+            NUS supervision in their prototype development programme.
           </p>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div>
-          <h3 class="entry-key">Smart Guess</h3>
-          <p class="entry-meta">Instance segmentation for livestock measurement</p>
-        </div>
-        <div class="entry-body">
-          <p>
-            Mask R-CNN extracts girth, front and back coordinates; a multi-input-output network predicts
-            height, length, weight and breed. Length and weight carried real class imbalance, so they were
-            treated as regression rather than forced into buckets. Second runner-up, BASIS National ICT Award
-            2019.
-          </p>
-          <figure hidden data-todo="add asset, then remove hidden" class="figure figure-narrow">
-            <div class="slot">
-              <p class="slot-what">Segmentation output — mask and extracted keypoints</p>
-              <p class="slot-spec">
-                One animal with the Mask R-CNN mask overlaid and the girth, front and back coordinates marked.
-                Vision work should show its output.
-              </p>
-            </div>
-          </figure>
         </div>
       </article>
 
@@ -669,29 +676,27 @@
     </div>
 
     <article class="pub">
-      <h3 class="pub-title">
-        <a href="https://doi.org/10.1145/3542954.3543018">CID: Cow Images Dataset for Regression and Classification</a>
-      </h3>
+      <h3 class="pub-title">BoviShift: A Six-Year Multi-Attribute Audit of Visual Cattle Phenotyping</h3>
+      <p class="pub-authors"><em>Mobasshir Bhuiya Shagor</em>, Nilambar Halder Tonmoy, Saef Ullah Miah</p>
+      <p class="pub-venue"><span class="review">Under review, 2026.</span></p>
+    </article>
+
+    <article class="pub">
+      <h3 class="pub-title">Explanation Faithfulness, Hallucination, and Fairness in LLM-Based Recommenders</h3>
+      <p class="pub-authors"><em>Mobasshir Bhuiya Shagor</em></p>
+      <p class="pub-venue"><span class="review">In preparation, 2026.</span></p>
+    </article>
+
+    <article class="pub">
+      <h3 class="pub-title"><a href="https://doi.org/10.1145/3542954.3543018">CID: Cow Images Dataset for Regression and Classification</a></h3>
       <p class="pub-authors"><em>Mobasshir Bhuiya Shagor</em>, Md Zahidul Haque Alvi, Khandaker Tabin Hasan</p>
       <p class="pub-venue">ICCA '22: Proceedings of the 2nd International Conference on Computing Advancements, March 2022</p>
     </article>
 
     <article class="pub">
-      <h3 class="pub-title">
-        <a href="https://dl.acm.org/doi/10.1145/3377049.3377074">CAM: Categorized Affect Map. Implementation of a Smart Geographic Information System for Categorizing Places Based on People's Affective Responses</a>
-      </h3>
+      <h3 class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3377049.3377074">CAM: Categorized Affect Map. Implementation of a Smart Geographic Information System for Categorizing Places Based on People's Affective Responses</a></h3>
       <p class="pub-authors"><em>Mobasshir Bhuiya Shagor</em>, Mahmood Al Rayhan, Kazi Imdadul Huq, Irin Nahar, Khandaker Tabin Hasan</p>
       <p class="pub-venue">ICCA 2020: Proceedings of the International Conference on Computing Advancements, January 2020</p>
-    </article>
-
-    <article class="pub">
-      <h3 class="pub-title">BoviShift: a six-year multi-attribute audit of visual cattle phenotyping</h3>
-      <p class="pub-venue"><span class="review">Under review, 2026.</span> Identity leakage and temporal distribution shift, decomposed.</p>
-    </article>
-
-    <article class="pub">
-      <h3 class="pub-title">Explanation faithfulness, hallucination and fairness in LLM-based recommenders</h3>
-      <p class="pub-venue"><span class="review">In preparation.</span> A zero-GPU audit protocol.</p>
     </article>
   </section>
 
@@ -699,7 +704,7 @@
   <section class="wrap band" id="systems">
     <div class="band-head">
       <h2>Systems in production</h2>
-      <span class="band-count">Personalization first, then the guards</span>
+      <span class="band-count">Where the research questions came from</span>
     </div>
 
     <article class="record">
@@ -710,7 +715,7 @@
           <dt>Shape</dt>
           <dd>Metered multi-tenant recommendation SaaS</dd>
           <dt>Stack</dt>
-          <dd class="stack">ALS matrix factorization, 64-dim ANN index, Celery over Redis, MLflow</dd>
+          <dd class="stack">NVIDIA Merlin, ALS on implicit feedback, 64-dim ANN index, Celery over Redis, MLflow</dd>
           <dt>Live</dt>
           <dd>
             <a href="https://app.algorec.ai/">app.algorec.ai</a><br>
@@ -721,41 +726,30 @@
       <div class="record-body">
         <h3 class="record-title">Refusing to accept a model on its own metrics</h3>
         <p>
-          Every candidate model was scored by AUC against a popularity baseline before it could be released.
-          A recommender that cannot beat "show the bestsellers" is an expensive way to do nothing. That
-          check was an early, informal version of what the research above now does deliberately, and it ran
-          in production years before I had a name for it.
+          No candidate model went live until it had been scored by AUC against a popularity baseline. A recommender
+          that cannot beat "show the bestsellers" is an expensive way to do nothing. That rule was an early, informal
+          version of what my research now does deliberately, and it ran in production years before I had a name
+          for it.
         </p>
         <p>
-          The setting made that check necessary. The signal is implicit — nobody rates anything,
-          they just buy — the matrix is overwhelmingly sparse, and a degraded model fails silently, returning
-          ten confident items that are wrong. When every API call is charged, plausible-but-wrong stops being
-          a modelling inconvenience and becomes a billing dispute. We modelled implicit feedback with ALS,
-          weighting confidence so a repeat purchase outweighs a single glance, and masked already-purchased
-          items from every ranking.
+          The setting made the rule necessary. The signal is implicit, since nobody rates anything and they just buy.
+          The matrix is overwhelmingly sparse, and a degraded model fails silently, returning ten confident items
+          that are wrong. When every API call is billed, plausible-but-wrong stops being a modelling inconvenience
+          and becomes a billing dispute. I researched and built two models on NVIDIA Merlin and an ALS model on
+          implicit feedback, weighting confidence so that a repeat purchase outweighs a single glance, and masked
+          already-purchased items from every ranking.
         </p>
         <p>
-          Serving is a search problem: embeddings precomputed during training, queried through an approximate
-          nearest-neighbour index in 64 dimensions. Training is dispatched over Redis to isolated Celery
-          workers with hard time ceilings and in-task memory guards, every run versioned in MLflow, exactly one
-          run ever marked servable, and quota checked before inference rather than after. Two real problems
-          solved: next-restaurant prediction across 18,948 delivery users, and a WooCommerce catalogue turned
-          into a live endpoint on a five-minute sync.
+          Serving is a search problem: embeddings are precomputed during training and queried through an approximate
+          nearest-neighbour index in 64 dimensions. Training runs go over Redis to isolated Celery workers with hard
+          time limits and memory guards; every run is versioned in MLflow, exactly one is ever marked servable, and
+          quota is checked before inference rather than after. Two real problems it solved: predicting the next
+          restaurant for 18,948 delivery customers, and turning a WooCommerce catalogue into a live endpoint on a
+          five-minute sync.
         </p>
-
-        <figure hidden data-todo="add asset, then remove hidden" class="figure figure-narrow">
-          <div class="slot">
-            <p class="slot-what">Chart — candidate models against the popularity baseline</p>
-            <p class="slot-spec">
-              AUC per candidate with the popularity baseline drawn as a horizontal reference line, and at
-              least one candidate falling below it. Showing a model you rejected is worth more than showing
-              only the winner.
-            </p>
-          </div>
-          <figcaption>
-            <b>Every candidate scored against "show the bestsellers."</b> A recommender that cannot beat
-            popularity is an expensive way to do nothing.
-          </figcaption>
+        <figure class="figure">
+          <img src="media/algorec-runs.webp" width="1400" height="724" loading="lazy" alt="AlgoRec dashboard listing training and inference function runs with their status.">
+          <figcaption>AlgoRec's run view, where training and inference runs are tracked per project.</figcaption>
         </figure>
       </div>
     </article>
@@ -766,66 +760,46 @@
           <dt>System</dt>
           <dd>Margin</dd>
           <dt>Shape</dt>
-          <dd>Adaptive learning, LLM-backed, deterministically bounded</dd>
-          <dt>Personalizes on</dt>
-          <dd class="stack">Two-stage mastery, 3&ndash;7&ndash;14&ndash;30 day spaced review, error patterns from last three essays</dd>
-          <dt>Stack</dt>
-          <dd class="stack">Two providers behind one proxy, append-only ledger, client-owned state machines</dd>
+          <dd>Adaptive writing tutor, LLM-graded, deterministically bounded</dd>
+          <dt>Personalises on</dt>
+          <dd class="stack">Two-stage mastery, 3, 7, 14, 30-day review, errors from the learner's last three essays</dd>
           <dt>Live</dt>
           <dd>
-            <a href="https://www.margin.mobasshirbhuiya.com/">margin</a><br>
-            <a href="https://github.com/bhuiyanmobasshir94/margin">Source</a><br>
+            <a href="https://www.margin.mobasshirbhuiya.com/">margin.mobasshirbhuiya.com</a><br>
             <a href="https://www.margin.mobasshirbhuiya.com/research">Research notes</a>
+          </dd>
+          <dt>Source</dt>
+          <dd class="stack">Private repository, access on request:<br>
+            <a href="https://github.com/bhuiyanmobasshir94/margin">github.com/bhuiyanmobasshir94/margin</a>
           </dd>
         </dl>
       </div>
       <div class="record-body">
         <h3 class="record-title">Personalization with a verification boundary</h3>
         <p>
-          Margin adapts to one learner: two-stage mastery, spaced review on a 3 → 7 → 14 → 30-day ladder, and
-          error patterns from your last three graded essays pulling matching lessons forward. That makes it a
-          personalization system, and personalization built on a language model inherits the model's
-          failure modes. A hallucinated band score sends a candidate into a real exam prepared against a
-          false signal.
+          I built Margin for my own exam preparation first. It adapts to one learner: two-stage mastery, spaced
+          review, and error patterns from the last three graded essays pulling matching lessons forward. That makes
+          it a personalization system, and personalization built on a language model inherits the model's failure
+          modes. A hallucinated band score sends a candidate into a real exam prepared against a false signal.
         </p>
         <p>
-          So it is also the working test of the thesis: a probabilistic model does the hard reasoning, and
+          So it is also a working test of the idea behind my research: the model does the hard reasoning, and
           deterministic code decides what the learner is allowed to see. Every response crosses a validation
-          boundary before it renders. Eighteen normalizers treat provider output as hostile input. Scores are
-          clamped to each exam's legal lattice, band aggregates are recomputed in code as the weighted mean of
-          their components so a headline can never contradict the numbers beneath it, and the client owns every
-          state machine rather than trusting the model's account of where it is. Each guard exists because a
-          real provider broke that rule. The 254 teaching entries are hand-authored rather than generated, so
-          they cannot hallucinate or vary between runs.
+          boundary before it renders. Eighteen normalizers treat provider output as untrusted input. Scores are
+          clamped to each exam's legal scale, band aggregates are recomputed in code from their components so a
+          headline can never contradict the numbers beneath it, and the client, not the model, owns every state
+          machine. Each guard is there because a real provider broke that rule. The 254 teaching entries are written
+          by hand, so they cannot hallucinate or change between runs.
         </p>
-        <p>
-          The runtime carries a reasoning-budget escalation ladder: a model that burns its allowance thinking
-          and returns nothing is retried with more headroom instead of billing for an answer nobody received.
-          Truncation is caught through finish_reason, and every call reserves credits under a row lock, then
-          finalizes or refunds.
-        </p>
-
-        <figure hidden data-todo="add asset, then remove hidden" class="figure figure-narrow">
-          <div class="slot">
-            <p class="slot-what">Screen recording — grading an essay end to end, 60 to 90 seconds</p>
-            <p class="slot-spec">
-              Submit, score, expand the per-criterion breakdown so the recomputed aggregate is visibly
-              consistent with its components. Host on YouTube unlisted and link a still frame here rather than
-              embedding an iframe. No narration needed; captions only.
-            </p>
-          </div>
-          <figcaption>
-            <b>The guard, visible.</b> The headline band is recomputed in code from the criterion scores, so
-            it cannot contradict the numbers beneath it.
-          </figcaption>
+        <figure class="figure">
+          <img src="media/margin-feedback.webp" width="1400" height="698" loading="lazy" alt="Margin essay feedback view flagging a subject-verb agreement error with an explanation.">
+          <figcaption>Margin flagging a subject-verb agreement error in a practice essay.</figcaption>
         </figure>
-
         <div class="limitation">
           <span class="limitation-label">Negative result, kept</span>
           <p>
-            I raised an output ceiling I believed was truncating explanations, then measured output at roughly
-            1,128 tokens against the original 1,250 limit. The hypothesis failed, and the finding stayed in the
-            record.
+            I raised an output ceiling I believed was truncating explanations, then measured output at about 1,128
+            tokens against the original 1,250 limit. The hypothesis was wrong, and the finding stays in the record.
           </p>
         </div>
       </div>
@@ -839,9 +813,9 @@
           <dt>Deployment</dt>
           <dd>Islami Bank Bangladesh PLC, four channels</dd>
           <dt>Scale</dt>
-          <dd>5,000+ daily users, sub-500ms latency</dd>
+          <dd>5,000+ daily users, sub-500 ms latency</dd>
           <dt>Stack</dt>
-          <dd class="stack">Bedrock, LangChain, Lambda, DynamoDB, KMS, CloudWatch</dd>
+          <dd class="stack">Amazon Bedrock, LangChain, Lambda, DynamoDB, KMS, CloudWatch</dd>
           <dt>Live</dt>
           <dd>
             <a href="https://koronik.ai/">koronik.ai</a><br>
@@ -852,46 +826,56 @@
       <div class="record-body">
         <h3 class="record-title">An agent is only as trustworthy as its refusal path</h3>
         <p>
-          A bank chatbot that invents an account rule doesn't produce a bad answer — it produces a compliance
-          incident. The hard engineering here was never the answer path. It was everything the model is not
+          A bank chatbot that invents an account rule doesn't produce a bad answer. It produces a compliance
+          incident. Koronik runs customer service for Islami Bank Bangladesh across web, WhatsApp, Messenger and
+          Facebook comments, and the hard engineering was never the answer path. It was everything the model is not
           allowed to do.
         </p>
         <p>
-          Retrieval is the contract: agents answer only from tenant-approved content indexed at ingestion, and
-          anything generated outside that corpus is a failure mode rather than a feature. Every response
-          carries a confidence score, and below the configured threshold the agent stops and routes the
-          customer to a hotline, branch or human agent instead of producing something plausible. A refusal
-          costs a click; a confident wrong number costs a customer.
+          Retrieval is the contract: agents answer only from content the bank has approved. Every response carries a
+          confidence score, and below the threshold the agent stops and routes the customer to a hotline, a branch or
+          a person instead of producing something plausible. A refusal costs a click; a confident wrong number costs a
+          customer. In multi-tenant retrieval, leakage between tenants is a breach, so isolation is enforced at the
+          DynamoDB partition key rather than in the prompt. Frustrated conversations escalate to human agents, who get
+          suggested replies rather than autonomous ones: the model drafts, a person sends. Every out-of-scope question
+          is logged against the knowledge base, so refusals become the list of what the agent still cannot answer.
         </p>
-        <p>
-          In multi-tenant RAG, retrieval leakage is a breach rather than a bug, so isolation is enforced at
-          the DynamoDB partition key rather than in the prompt. CloudWatch traces every agent decision, and
-          usage meters in tokens against a per-tenant wallet so cost stays attributable down to the agent and
-          channel. Sentiment scoring escalates frustrated conversations to human agents, who receive suggested
-          replies rather than autonomous ones — the model drafts, a person sends. Every out-of-scope query is
-          logged against the knowledge base, so refusals become the backlog of what the agent still cannot
-          answer.
-        </p>
-
-        <figure hidden data-todo="add asset, then remove hidden" class="figure figure-narrow">
-          <div class="slot">
-            <p class="slot-what">Screenshot — the agent declining and escalating</p>
-            <p class="slot-spec">
-              Not a generic chat window. Capture a below-threshold turn: the agent stopping, the confidence
-              value, and the handoff to a human or branch. Redact customer content. This is the one screenshot
-              that shows the thesis instead of stating it.
-            </p>
-          </div>
-          <figcaption>
-            <b>A refusal costs a click.</b> Below the configured confidence threshold the agent stops rather
-            than producing something plausible.
-          </figcaption>
+        <figure class="figure">
+          <img src="media/koronik-console.webp" width="1400" height="698" loading="lazy" alt="Koronik console showing the list of configured agents and their channels.">
+          <figcaption>Koronik's agent console.</figcaption>
         </figure>
-
         <div class="limitation">
           <span class="limitation-label">Open gap</span>
-          <p>That feedback loop is human-reviewed today. Nothing retrains itself yet. Next to close.</p>
+          <p>That feedback loop is reviewed by people today. Nothing retrains itself yet. It is next to close.</p>
         </div>
+      </div>
+    </article>
+
+    <article class="record">
+      <div class="rail">
+        <dl>
+          <dt>System</dt>
+          <dd>KhaoDao GPT</dd>
+          <dt>Shape</dt>
+          <dd>Conversational ordering agent for food delivery</dd>
+          <dt>Stack</dt>
+          <dd class="stack">Llama via Ollama, Elasticsearch retrieval, order API</dd>
+          <dt>Live</dt>
+          <dd><a href="https://www.facebook.com/messages/t/323694151609035">Chat on Messenger</a></dd>
+        </dl>
+      </div>
+      <div class="record-body">
+        <h3 class="record-title">An agent that finishes the order</h3>
+        <p>
+          KhaoDao GPT pairs Llama models with Elasticsearch retrieval over local restaurants, menus and items. It
+          takes a customer from "suggest me something nearby" to a complete order payload for the backend. Of
+          everything I have shipped, it is the closest to the agentic personalization I want to study: a model acting
+          for one person, on that person's preferences, with money at the end of the conversation.
+        </p>
+        <figure class="figure figure-narrow" style="max-width:430px;">
+          <img src="media/khaodao-gpt-chat.webp" width="432" height="430" loading="lazy" alt="Chat transcript in which the KhaoDao assistant helps a user order a medium eggplant pizza.">
+          <figcaption>A customer ordering a pizza through KhaoDao GPT.</figcaption>
+        </figure>
       </div>
     </article>
 
@@ -901,9 +885,9 @@
           <dt>System</dt>
           <dd>Easymator</dd>
           <dt>Domain</dt>
-          <dd>Construction estimation from architectural drawings</dd>
+          <dd>Construction takeoff from architectural drawings</dd>
           <dt>Scale</dt>
-          <dd>7,410 catalog materials priced off measured geometry</dd>
+          <dd>7,410 catalogue materials priced from measured geometry</dd>
           <dt>Live</dt>
           <dd><a href="https://easymator.com/login">easymator.com</a></dd>
         </dl>
@@ -911,50 +895,98 @@
       <div class="record-body">
         <h3 class="record-title">Choosing not to automate the step that would fail invisibly</h3>
         <p>
-          Drawings arrive as PDFs, rasterized at 300 DPI, with all measurement in image space. The geometry is not the hard part. A pixel means nothing until you know what it is worth. Each drawing carries
-          scale factors validated as positive before any conversion runs, because getting that wrong prices
-          thousands of materials against a fiction.
+          Drawings arrive as PDFs and are rasterised at 300 DPI, with all measurement in image space. The geometry is
+          not the hard part. A pixel means nothing until you know what it is worth, so each drawing carries scale
+          factors that are validated before any conversion runs. Get that wrong and thousands of materials are priced
+          against a fiction.
         </p>
         <p>
-          Automatic detection of walls and openings was the obvious next step, and we did not take it. A
-          misdetected edge produces a confident wrong number nobody can see; a badly traced edge is visibly
-          wrong. The contractor traces, the system measures, and the pipeline reports its own duration, point
-          count and success rate across a rolling window.
+          Automatic detection of walls and openings was the obvious next feature, and we chose not to build it. A
+          misdetected edge produces a confident wrong number nobody can see; a badly traced edge is visibly wrong. The
+          contractor traces, the system measures, and the pipeline reports its own duration, point count and success
+          rate over a rolling window.
         </p>
-
-        <figure hidden data-todo="add asset, then remove hidden" class="figure figure-narrow">
-          <div class="slot">
-            <p class="slot-what">Screenshot — a traced drawing with calibration overlay</p>
-            <p class="slot-spec">
-              Rasterized plan with traced points visible, the scale reference marked, and the derived
-              real-world measurement labelled. Use a sample or anonymised drawing, never a client's.
-            </p>
-          </div>
-          <figcaption>
-            <b>A pixel means nothing until you know what it is worth.</b> Scale factors are validated before
-            any conversion runs.
-          </figcaption>
+        <figure class="figure">
+          <img src="media/easymator-takeoff.webp" width="1400" height="977" loading="lazy" alt="Easymator takeoff screen with a table of measured items and their materials.">
+          <figcaption>Easymator's takeoff view.</figcaption>
         </figure>
-
         <div class="limitation">
           <span class="limitation-label">Known gap</span>
-          <p>
-            When calibration is missing, the converter falls back to raw pixel units instead of refusing.
-            Fail-open, and next to fix.
-          </p>
+          <p>When calibration is missing, the converter falls back to raw pixel units instead of refusing. That is
+          fail-open, and it is next to fix.</p>
         </div>
       </div>
     </article>
+
+    <div class="also">
+      <h3>Other production work</h3>
+      <p>Shorter entries, because they matter less to the research question. They are here because they show range.</p>
+      <div class="also-grid">
+        <div class="also-card">
+          <img src="media/traffic-ai.webp" width="1200" height="601" loading="lazy" alt="Traffic AI dashboard analysing a highway video feed.">
+          <h4>Traffic AI</h4>
+          <p>Vehicle analysis and toll collection from live video, with YOLOv8, Supervision and Kafka.</p>
+          <p class="links"><a href="https://traffic-ai.streamlit.app/">Live demo</a></p>
+        </div>
+        <div class="also-card">
+          <h4>Gaze AI</h4>
+          <p>Eye tracking with MediaPipe to measure how long shoppers look at product displays; in alpha with a
+          supermarket chain.</p>
+        </div>
+        <div class="also-card">
+          <h4>FaceID Auth and GCognito</h4>
+          <p>A face-recognition login service in PyTorch, inside an in-house identity platform modelled on Amazon
+          Cognito.</p>
+        </div>
+        <div class="also-card">
+          <h4>Feedback analysis for KhaoDao</h4>
+          <p>GPT-based extraction of sentiment, emotion and issues from social-media feedback, routed to the team
+          that owns them.</p>
+        </div>
+        <div class="also-card">
+          <h4>Bengali and English OCR</h4>
+          <p>Identity-document verification and menu digitisation on PyTorch and EasyOCR, including a desktop
+          annotation tool.</p>
+        </div>
+        <div class="also-card">
+          <h4>Regulatory ML at Renforce</h4>
+          <p>Obligation extraction from regulatory PDFs, an entity extractor, and a rule recogniser at 80% accuracy
+          and 0.78 F1, on a Kafka and Airflow platform I designed.</p>
+        </div>
+        <div class="also-card">
+          <h4>Smart parking vision</h4>
+          <p>Vehicle, number-plate and parking-space detection for an automated parking system.</p>
+        </div>
+        <div class="also-card">
+          <h4>Qesfera</h4>
+          <p>A credit-risk modelling application with a dataset visualiser, prediction analyser and reporting.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- ============ WRITING ============ -->
+  <!-- ============ WRITING & TALKS ============ -->
   <section class="wrap band" id="writing">
     <div class="band-head">
-      <h2>Writing, tools and talks</h2>
-      <span class="band-count">Technical books and open source</span>
+      <h2>Writing, teaching and talks</h2>
+      <span class="band-count">Translation, books, tools, decks</span>
     </div>
 
     <div class="entries">
+      <article class="entry">
+        <div>
+          <h3 class="entry-key">NYU Deep Learning, in Bengali</h3>
+          <p class="entry-meta">Translation, course site</p>
+        </div>
+        <div class="entry-body">
+          <p>
+            I translated Week 12 of the NYU Deep Learning course by Yann LeCun and Alfredo Canziani, the week on deep
+            learning for language (word2vec, GPT, BERT), into Bengali. It is published on the course site alongside
+            the other translations.
+          </p>
+          <p class="links"><a href="https://atcold.github.io/NYU-DLSP20/bn/week12/12/">Read the Bengali chapter</a></p>
+        </div>
+      </article>
 
       <article class="entry">
         <div>
@@ -963,11 +995,10 @@
         </div>
         <div class="entry-body">
           <p>
-            <em>The Python Engineering Cookbook, Second Edition</em> (with Jishnu Saha) on CPython internals,
-            concurrency, observability and memory fundamentals; <em>The AI-Era Engineering Playbook</em> (with
-            Jishnu Saha) on how AI is reshaping engineering practice; and <em>Shipping with Claude</em>, a team
-            runbook for agentic coding tools across the SDLC, including a chapter on malicious code injection
-            in agentic systems.
+            <em>The Python Engineering Cookbook</em>, second edition, and <em>The AI-Era Engineering Playbook</em>,
+            both co-written with Jishnu Saha as first author; and <em>Shipping with Claude</em>, which I wrote alone:
+            a team runbook for agentic coding tools across the software lifecycle, with a chapter on malicious code
+            injection in agentic systems.
           </p>
         </div>
       </article>
@@ -979,35 +1010,49 @@
         </div>
         <div class="entry-body">
           <p>
-            A stack-agnostic orchestrator-worker template for agentic coding: four agents at different
-            capability tiers, enforcement hooks, and a verification toolchain. The design principle it settled on, that authorization boundaries fail closed while observability boundaries may fail open, came from a real production bug where a read-only hook failed open on malformed JSON.
+            An orchestration template for agentic coding: four agents at different capability tiers, enforcement
+            hooks and a verification toolchain. It encodes one rule I learned the hard way, after a read-only hook
+            failed open on malformed JSON: authorization boundaries fail closed, while observability boundaries may
+            fail open.
           </p>
           <p class="links"><a href="https://github.com/bhuiyanmobasshir94/claude-standing-orders">Repository</a></p>
         </div>
       </article>
-
     </div>
 
-    <div class="talks" style="margin-top:clamp(2.2rem,5vw,3rem);">
+    <div class="talk-feature" style="margin-top:clamp(2.4rem,5vw,3.2rem);">
+      <img src="media/droidcon-2017.webp" width="1100" height="618" loading="lazy" alt="Mobasshir presenting on stage at Droidcon 2017.">
+      <div>
+        <h3>Talks and decks</h3>
+        <p>I have presented at ICCA, to the National University of Singapore, at Droidcon 2017 and to the BASIS
+        National ICT Awards jury. The decks are linked below.</p>
+      </div>
+    </div>
+
+    <div class="talks">
       <div class="talk">
         <p class="talk-name"><a href="https://docs.google.com/presentation/d/1UtBOJhFD9HKRyAkfqm60QOip1hBpyoMtFv59fUeedbI/present">CID at ICCA 2022</a></p>
         <p class="talk-note">Conference presentation</p>
       </div>
       <div class="talk">
+        <p class="talk-name"><a href="https://docs.google.com/presentation/d/10OBDL0RfYtuqN9TooJeu-jGPNQwTuKEybjaXs_nGeZg/present">KhaoDao Recommendation Engine</a></p>
+        <p class="talk-note">Prototype presentation to NUS, 2020</p>
+      </div>
+      <div class="talk">
         <p class="talk-name"><a href="https://docs.google.com/presentation/d/1YUbRTfzu8IEvk1VD4TehtreZa3QyaKBHrvZWTm9by_I/present">Categorized Affect Map</a></p>
-        <p class="talk-note">Thesis presentation</p>
-      </div>
-      <div class="talk">
-        <p class="talk-name">AI safety and bias detection in production</p>
-        <p class="talk-note">Building responsible ML systems with AWS</p>
-      </div>
-      <div class="talk">
-        <p class="talk-name"><a href="https://docs.google.com/presentation/d/10OBDL0RfYtuqN9TooJeu-jGPNQwTuKEybjaXs_nGeZg/present">KhaoDao ML deck</a></p>
-        <p class="talk-note">Prototype presentation to NUS</p>
+        <p class="talk-note">Thesis defence</p>
       </div>
       <div class="talk">
         <p class="talk-name"><a href="https://docs.google.com/presentation/d/1aqbCULMf2wqiEJ2YtP1WdS_bunR-OQWVSk3TempU30M/present">Smart Guess</a></p>
-        <p class="talk-note">BASIS National ICT Award submission</p>
+        <p class="talk-note">BASIS National ICT Awards submission, 2019</p>
+      </div>
+      <div class="talk">
+        <p class="talk-name">AI Safety and Bias Detection in Production</p>
+        <p class="talk-note">Building responsible ML systems with AWS; deck on request</p>
+      </div>
+      <div class="talk">
+        <p class="talk-name">Droidcon 2017</p>
+        <p class="talk-note">Conference talk</p>
       </div>
     </div>
   </section>
@@ -1016,120 +1061,132 @@
   <section class="wrap band" id="background">
     <div class="band-head">
       <h2>Background</h2>
-      <span class="band-count">Education, recognition, tools</span>
+      <span class="band-count">Education, experience, recognition, tools</span>
     </div>
 
     <div class="entries" style="margin-bottom:clamp(2.6rem,6vw,3.6rem);">
-
       <article class="entry">
-        <div>
-          <h3 class="entry-key">Education</h3>
-          <!-- Replace with: <img class="portrait" src="media/portrait.jpg" alt="Mobasshir Bhuiya Shagor"> -->
-          <div class="portrait-slot" style="margin-top:.8rem;" hidden>Portrait, 4:5</div>
-        </div>
+        <div><h3 class="entry-key">Education</h3></div>
         <div class="entry-body">
           <p>
-            BSc in Computer Science and Engineering, <a href="https://www.aiub.edu/">American International
-            University Bangladesh</a>. Specialist Training in Artificial Intelligence and Prototype
-            Development, <a href="https://nus.edu.sg/">National University of Singapore</a>, delivered through the Singapore e-Government Leadership Centre with the Bangladesh Ministry of ICT.
+            B.Sc. in Computer Science and Engineering,
+            <a href="https://www.aiub.edu/">American International University Bangladesh</a>, 2014 to 2018, with a
+            thesis that became the Categorized Affect Map paper. Specialist Training and Prototype Development in
+            Artificial Intelligence, <a href="https://nus.edu.sg/">National University of Singapore</a>, 2020,
+            delivered with the Singapore e-Government Leadership Centre and the Bangladesh Ministry of ICT.
           </p>
         </div>
       </article>
 
       <article class="entry">
-        <div>
-          <h3 class="entry-key">Experience</h3>
-        </div>
+        <div><h3 class="entry-key">Experience</h3></div>
         <div class="entry-body">
           <p>
-            Staff Machine Learning Engineer at Graaho Technologies since 2023. Earlier at Graaho: Senior
-            Machine Learning Engineer seconded to <a href="https://www.renforce.io/">Renforce</a> in Sydney
-            (2021&ndash;2023), building their regulatory ML platform; Machine Learning Engineer
-            (2020&ndash;2021); and Data Scientist (2019&ndash;2020).
+            Staff Machine Learning Engineer at Graaho Technologies since February 2023. Before that, at Graaho:
+            Senior Machine Learning Engineer seconded to <a href="https://www.renforce.io/">Renforce</a> in Sydney
+            (2021&ndash;2023), building the ML behind a regulatory-compliance product; Machine Learning Engineer
+            (2020&ndash;2021); and Data Scientist (2019&ndash;2020). Research assistant at the AIUB Data Science Lab
+            from 2017 to 2018.
           </p>
         </div>
       </article>
 
       <article class="entry">
-        <div>
-          <h3 class="entry-key">Recognition</h3>
-        </div>
+        <div><h3 class="entry-key">Recognition</h3></div>
         <div class="entry-body">
           <p>
-            BASIS National ICT Award 2019, second runner-up in AI and Agriculture, for Smart Guess.
-            Kaggle 3&times; Expert, top 5% of data scientists. Top 10, Sustainable Development Goal Hackathon
-            2018 (Banglalink Digital and a2i), for the Categorized Affect Map.
+            BASIS National ICT Award 2019, second runner-up in AI in Agriculture, for Smart Guess
+            (<a href="https://www.youtube.com/watch?v=2NY3tlqN6Ic">ceremony recording</a>).
+            Kaggle 3&times; Expert, top 5% of data scientists. Specialist Training in AI through the Singapore
+            e-Government Leadership Centre and the Bangladesh Ministry of ICT, 2020. Top 10, Sustainable Development
+            Goal Hackathon 2018, Banglalink Digital and a2i.
+          </p>
+          <figure class="figure figure-narrow">
+            <img src="media/basis-2019.webp" width="842" height="473" loading="lazy" alt="The Smart Guess team on stage receiving the BASIS National ICT Award in 2019.">
+            <figcaption>Receiving the BASIS National ICT Award with the Smart Guess team, 2019.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div><h3 class="entry-key">Certifications</h3></div>
+        <div class="entry-body">
+          <p>
+            AWS Certified Machine Learning, Specialty (2026). AWS Certified Solutions Architect, Associate (2024).
+            Udacity nanodegrees in machine learning engineering on Azure, deep learning, edge AI with Intel, and
+            cloud DevOps.
           </p>
         </div>
       </article>
 
+      <article class="entry">
+        <div><h3 class="entry-key">Mentoring</h3></div>
+        <div class="entry-body">
+          <p>
+            Mentor with Code to Communicate and Free The Mind, teaching programming to under-served students, 2018 to
+            2020. Study-group leader for the Udacity Bertelsmann and Intel Edge AI scholarship cohorts, where the
+            cohorts of roughly 5,000 and 13,000 students voted me two "You Rock" awards.
+          </p>
+        </div>
+      </article>
     </div>
 
     <div class="skillgrid">
-
       <div class="skillset">
         <h3>Research and modelling</h3>
         <dl>
-          <dt>Frameworks</dt>
-          <dd>PyTorch, TensorFlow, Keras, scikit-learn, OpenCV, RAPIDS</dd>
           <dt>Methods</dt>
-          <dd>Instance segmentation, matrix factorization and implicit feedback, sequence labelling, multi-label classification, retrieval-augmented generation</dd>
-          <dt>Scientific stack</dt>
-          <dd>NumPy, pandas, SciPy, spaCy, NLTK, Surprise, Implicit</dd>
+          <dd>Evaluation design, distribution shift, dataset construction, recommender systems, implicit feedback, instance segmentation, OCR, sequence labelling, multi-label classification</dd>
+          <dt>Frameworks</dt>
+          <dd>PyTorch, TensorFlow, Keras, scikit-learn, OpenCV, NVIDIA Merlin, DLRM, YOLOv8, Mask R-CNN, MediaPipe, Supervision, RAPIDS, spaCy, NLTK, Surprise, Implicit</dd>
         </dl>
       </div>
-
       <div class="skillset">
-        <h3>Production ML</h3>
+        <h3>LLMs, agents and MLOps</h3>
         <dl>
-          <dt>MLOps</dt>
-          <dd>MLflow, Ray, Airflow, Celery and Redis, approximate nearest-neighbour serving</dd>
-          <dt>Services</dt>
-          <dd>Python, FastAPI, Django and DRF, PostgreSQL, MongoDB, Docker</dd>
-          <dt>Edge</dt>
-          <dd>Intel OpenVINO</dd>
+          <dt>LLMs and agents</dt>
+          <dd>Amazon Bedrock, OpenAI and Anthropic APIs, LangChain, Llama and Ollama, Elasticsearch, retrieval-augmented generation, guardrails and refusal design, Claude Code</dd>
+          <dt>MLOps and data</dt>
+          <dd>MLflow, Airflow, Ray, Celery, Redis, RabbitMQ, Kafka, Spark, PostgreSQL, DynamoDB, MongoDB, Snowflake, BigQuery</dd>
         </dl>
       </div>
-
       <div class="skillset">
-        <h3>Infrastructure</h3>
+        <h3>Cloud, services and languages</h3>
         <dl>
-          <dt>AWS</dt>
-          <dd>SageMaker, Bedrock, Lambda, DynamoDB, S3, ECS, Glue, EMR, Redshift, Athena, MWAA, Personalize</dd>
-          <dt>Data platform</dt>
-          <dd>Spark, Kafka, Snowflake, BigQuery</dd>
-          <dt>Delivery</dt>
-          <dd>GitHub Actions, Jenkins, Ansible, Nginx, Linux</dd>
+          <dt>Cloud and delivery</dt>
+          <dd>AWS (SageMaker, Bedrock, Lambda, API Gateway, S3, ECS, Glue, EMR, Redshift, Athena, Personalize), GCP, Docker, GitHub Actions, Jenkins, Ansible, Nginx, Linux</dd>
+          <dt>Services and languages</dt>
+          <dd>Python, SQL, C++, Java, JavaScript; FastAPI, Django, Django REST Framework</dd>
         </dl>
       </div>
-
     </div>
 
     <p class="footnote">
-      Also: C++, Java, SQL, Scala, R. Earlier work is on GitHub: MultiCoNER (SemEval 2022 Task 11), where replacing the
-      CRF layer with BiLSTM-CRF improved precision, recall and F1 over the task baseline; Azure ML pipelines;
-      edge inference on OpenVINO; clickstream warehousing; and Bengali grapheme classification.
+      Earlier work is on <a href="https://github.com/bhuiyanmobasshir94">GitHub</a>: MultiCoNER (SemEval 2022 Task 11),
+      where replacing the CRF layer with BiLSTM-CRF improved precision, recall and F1 over the task baseline; Bengali
+      handwritten grapheme classification; clickstream data warehousing; Azure ML pipelines; and edge inference on
+      Intel OpenVINO.
     </p>
   </section>
 
   <!-- ============ CONTACT ============ -->
   <section class="wrap closer" id="contact">
-    <p class="closer-line">Currently looking for two things.</p>
+    <p class="closer-line">I am looking for two things.</p>
     <p class="closer-body">
-      A funded US CS PhD position starting Fall 2027, with an advisor working on evaluation, personalization,
-      trustworthy ML or distribution shift; and applied scientist roles where the work is building
-      measurement infrastructure rather than only models. If either sounds like your group, I would be glad
-      to send the full research statement.
+      A funded PhD position in computer science in the US from Fall 2027, with an advisor working on evaluation,
+      recommender systems, trustworthy ML or distribution shift. And applied scientist roles where the work includes
+      building the instruments, not only the models. If either describes your group or team, I would be glad to
+      send the one-page research summary or talk.
     </p>
     <div class="contact-rail" style="margin-top:0;">
       <a href="mailto:mobasshir.bhuiya@gmail.com">mobasshir.bhuiya@gmail.com</a>
+      <a href="Shagor_Mobasshir_CV.pdf">CV</a>
+      <a href="Shagor_Mobasshir_Research_Summary.pdf">Research summary</a>
       <a href="https://scholar.google.com/citations?user=QS61JrYAAAAJ&amp;hl=en">Google Scholar</a>
       <a href="https://github.com/bhuiyanmobasshir94">GitHub</a>
       <a href="https://www.linkedin.com/in/mobasshir-bhuiya-shagor/">LinkedIn</a>
-      <a href="https://www.researchgate.net/profile/Mobasshir-Shagor">ResearchGate</a>
       <a href="https://www.kaggle.com/mobasshir">Kaggle</a>
       <a href="https://medium.com/@mobasshirbhuiya">Medium</a>
-      <a href="Shagor_Mobasshir_CV.pdf">CV</a>
     </div>
 
     <div class="colophon">
